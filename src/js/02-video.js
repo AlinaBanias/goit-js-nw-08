@@ -16,4 +16,7 @@ function onPlay({ seconds }) {
     localStorage.setItem(STORAGE_KEY, seconds);
 
 }
-player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
+const savedMessage = localStorage.getItem(STORAGE_KEY , iframe);
+if(savedMessage) {
+    console.log(savedMessage);
+}
