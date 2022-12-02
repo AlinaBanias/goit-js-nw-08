@@ -16,7 +16,13 @@ function onPlay({ seconds }) {
     localStorage.setItem(STORAGE_KEY, seconds);
 
 }
-const savedMessage = localStorage.getItem(STORAGE_KEY , iframe);
-if(savedMessage) {
+   function populateVimeo () {
+    const savedMessage = localStorage.getItem(STORAGE_KEY, 'iframe');
+    player.setCurrentTime(savedMessage);
+ if(savedMessage) {
     console.log(savedMessage);
+    
+ };
 }
+populateVimeo ();
+
